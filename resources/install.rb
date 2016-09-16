@@ -57,7 +57,7 @@ action :create do
     end
 
     package 'telegraf' do
-      options '-o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
+      options '--force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"'
       version install_version
     end
   when 'tarball'
